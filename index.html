@@ -14,11 +14,26 @@
       <div class="navbar-inner">
         <a class="brand" href="#">Blogger</a>
         <ul class="nav">
-          <li><a href="#">Posts</a></li>
-          <li><a>About</a></li>
+          <li>{{#link-to 'posts'}}Potsts{{/link-to}}</li>
+          <li>{{#link-to 'about'}}About{{/link-to}}</li>
         </ul>
       </div>
-    </div>    
+    </div>  
+
+    {{outlet}}  
+  </script>
+
+  <script type="text/x-handlebars" id="about">
+    <div class='about'>
+      <p>
+        My first ember js app... Yaay!!!
+      </p>
+
+      <p>
+        Tutorial by <a href="http://emberjs.com">emberjs.com</a>.
+      </p>
+
+    </div>
   </script>
 
   <script src="js/libs/jquery-1.10.2.js"></script>
