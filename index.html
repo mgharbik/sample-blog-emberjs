@@ -36,6 +36,34 @@
     </div>
   </script>
 
+  <script type="text/x-handlebars" id="posts">
+    <div class="container-fluid">
+      <div class="row-fluid">
+        <div class="span3">
+          <table class='table'>
+            <thead>
+              <tr><th>Recent Posts</th></tr>
+            </thead>
+
+            <tbody>
+              {{#each}}
+                <tr>
+                  <td>
+                    {{title}} <small class="muted">by {{author.name}}</name>
+                  </td>
+                </tr>
+              {{/each}}
+            </tbody>
+          </table>
+        </div>
+
+        <div class="span9">
+          {{outlet}}
+        </div>
+      </div>
+    </div>
+  </script>
+
   <script src="js/libs/jquery-1.10.2.js"></script>
   <script src="js/libs/handlebars-v2.0.0.js"></script>
   <script src="js/libs/ember-1.9.1.js"></script>
